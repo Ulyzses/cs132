@@ -7,6 +7,9 @@
     <title>CS 132</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/styles.css" id="theme">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambay&family=Hind+Madurai&family=Montserrat&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -14,102 +17,129 @@
         <div class="header-container container-wide">
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Overview</a></li>
-                    <li><a href="">Data</a></li>
-                    <li><a href="">Methods</a></li>
-                    <li><a href="">Results</a></li>
-                    <li><a href="">Team</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#team">Team</a></li>
                 </ul>
             </nav>
-            <div class="theme-changer-container">
+            <!-- <div class="theme-changer-container">
                 <button onclick="toggleTheme()">Click Me!</button>
-            </div>
+            </div> -->
         </div>
     </header>
     <section id="home">
-        <div class="home-container container-wide">
+        <div class="home-container container">
             <div class="logo">
-                <img src="images/logo.png" alt="logo">
+                <img src="images/2Q.png" alt="logo">
             </div>
-            <div class="header-content">
-                <h3>Hi! We are PyJaMas</h3>
-                <p>This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc</span>. Our project aims to investigate tweets that red-tag Chad Booc and related parties, and analyse the behaiours of these tweeps.</p>
+            <div id="home-content">
+                <h3 id="intro">Hi. We are the <span id="group-name"><span class="intro-letter" id="intro-P">P</span>y<span class="intro-letter" id="intro-J">J</span>a<span class="intro-letter" id="intro-M">M</span>as!</span></h3>
+                <p id="home-desc">This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc and Lumad Schools</span>, which aims to investigate tweets that red-tag the mentioned parties, and analyse the behaiours of these tweeps.</p>
                 <div id="team-members">
                     <ul>
-                        <li>Marius Barcenas</li>
-                        <li>Julia Dy</li>
-                        <li>Joshua Felipe</li>
+                        <li id="member-P">Pips</li>
+                        <li id="member-J">Julia</li>
+                        <li id="member-M">Marius</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     <section id="overview">
-        <div id="overview-container">
-            <h1>
+        <div class="container" id="overview-container">
+            <h1 class="section-title">
                 Overview
             </h1>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
             </p>
-            <div class="card-container">
+            <!-- <div class="card-container"> -->
                 <div class="card">
-                    <img src="" alt="" class="card-logo">
-                    <h3>
-                        Motivation
-                    </h3>
-                    <p>
-                        Red-tagging is an issue that hits close to home for any UP student. Chad Booc, a graduate of our department and an alumnus of UP CURSOR, is a famous victim. The circumstances surrounding his death are a particularly polarizing topic. While many condemned the state for his death, many still lauded the government for its actions. We observed many Tweets that red-tagged Chad and portrayed him as a terrorist. Our frustration regarding this, and the inherent dangers of red-tagging, lead us to choose this issue as the focus of our CS 132 project.
-                    </p>
+                    <div class="left">
+                        <h3>
+                            Motivation
+                        </h3>
+                        <img src="" alt="" class="card-logo">
+                    </div>
+                    <div class="right">
+                        <p>
+                            Red-tagging is an issue that hits close to home for any UP student. Chad Booc, a graduate of our department and an alumnus of UP CURSOR, is a famous victim. The circumstances surrounding his death are particularly polarizing. While many condemned the state for his death, quite a few still lauded the government for its actions, an indication of the success of the state's red-tagging. Our frustration regarding this, and the inherent dangers of red-tagging, lead us to choose this issue as the focus of our CS 132 project.
+                        </p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="" class="card-logo">
-                    <h3>
-                        Problem
-                    </h3>
-                    <p>Twitter has become a prominent platform for red-taggers to spread disinformation and target activists like Chad Booc. The ease with which information can be disseminated on Twitter means that disinformation can quickly gain traction and be amplified, leading to potentially severe consequences for targeted individuals and movements. These consequences include defamation, harassment, or even death, like in Chad Booc’s case.
-                    </p>
+                    <div class="left">
+                        <h3>
+                            Problem
+                        </h3>
+                        <img src="" alt="" class="card-logo">
+                    </div>
+                    <div class="right">
+                        <p>Twitter has become a prominent platform for red-taggers to spread disinformation and target activists like Chad Booc. The ease with which information can be disseminated on Twitter means that disinformation can quickly gain traction and be amplified, leading to potentially severe consequences for targeted individuals and movements. These consequences include defamation, harassment, or even death, like in Chad Booc's case.
+                        </p>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="" class="card-logo">
-                    <h3>
-                        Solution
-                    </h3>
-                    <p>
-                        The use of disinformation by red-taggers can make it hard to properly refute their arguments. Through this project, we will be able to analyze the behavior and intent of red taggers on Twitter and identify patterns of red-tagging. Through this, we can gain a better understanding of how red-taggers operate which can be helpful as a reference for combatting disinformation.
-                    </p>
+                    <div class="left">
+                        <h3>
+                            Solution
+                        </h3>
+                        <img src="" alt="" class="card-logo">
+                    </div>
+                    <div class="right">
+                        <p>
+                            Through this project, we aim to be able to analyze the behavior and intent of red taggers on Twitter and identify their patterns of red-tagging. Through this, we can gain a better understanding on how red-taggers operate which can be helpful as a reference for combatting this kind of disinformation in the future.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </section>
-    <section id="research-question">
+    <section class="container" id="research-question">
         <div id="research-question-container">
-            <h1>Problem Formulation</h1>
-            <div class="thing-1">
-                <h3>Research Question</h3>
-                <p>What kind of behaviour did red-taggers exhibit from 2016-2022 concerning Chad Booc and his activities in relation with:</p>
-                <ol>
-                    <li>frequency of tweets,</li>
-                    <li>keywords used and their frequencies, and</li>
-                    <li>sentiment of comments?</li>
-                </ol>
+            <h1 class="section-title">Problem Formulation</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
+            </p>
+            <div class="card">
+                <div class="left">
+                    <h3>Research Question</h3>
+                </div>
+                <div class="right">
+                    <p>What kind of behaviour did red-taggers exhibit from 2016-2022 concerning Chad Booc and his activities in relation with:</p>
+                    <ol>
+                        <li>frequency of tweets,</li>
+                        <li>keywords used and their frequencies, and</li>
+                        <li>sentiment of comments?</li>
+                    </ol>
+                </div>
             </div>
-            <div class="thing-1">
-                <h3>Hypotheses</h3>
-                <ol>
-                    <li>The tweets red-tagging Chad Booc, and his activities significantly increased in frequency after his death.</li>
-                    <li>There was a significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                    <li>There is a shift in the emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                </ol>
+            <div class="card">
+                <div class="left">
+                    <h3>Hypotheses</h3>
+                </div>
+                <div class="right">
+                    <ol>
+                        <li>The tweets red-tagging Chad Booc, and his activities significantly increased in frequency after his death.</li>
+                        <li>There was a significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                        <li>There is a shift in the emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                    </ol>
+                </div>
             </div>
-            <div class="thing-1">
-                <h3>Null Hypotheses</h3>
-                <ol>
-                    <li>There is no significant increase in the frequency of tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                    <li>There is no significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                    <li>There is no significant shift in emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                </ol>
+            <div class="card">
+                <div class="left">
+                    <h3>Null Hypotheses</h3>
+                </div>
+                <div class="right">
+                    <ol>
+                        <li>There is no significant increase in the frequency of tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                        <li>There is no significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                        <li>There is no significant shift in emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>
