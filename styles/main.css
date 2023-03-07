@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.container-wide {
+    padding: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 0 10px;
+}
+
+header a {
+    text-decoration: none;
+}

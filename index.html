@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 132</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css" id="theme">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container container-wide">
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Overview</a></li>
+                    <li><a href="">Data</a></li>
+                    <li><a href="">Methods</a></li>
+                    <li><a href="">Results</a></li>
+                    <li><a href="">Team</a></li>
+                </ul>
+            </nav>
+            <div class="theme-changer-container">
+                <button onclick="toggleTheme()">Click Me!</button>
+            </div>
+        </div>
+    </header>
+    <section id="home">
+        <div class="home-container container-wide">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="header-content">
+                <h3>Hi! We are PyJaMas</h3>
+                <p>This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc</span>. Our project aims to investigate tweets that red-tag Chad Booc and related parties, and analyse the behaiours of these tweeps.</p>
+                <div id="team-members">
+                    <ul>
+                        <li>Marius Barcenas</li>
+                        <li>Julia Dy</li>
+                        <li>Joshua Felipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="overview">
+        <div id="overview-container">
+            <h1>
+                Overview
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
+            </p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="" alt="" class="card-logo">
+                    <h3>
+                        Motivation
+                    </h3>
+                    <p>
+                        Red-tagging is an issue that hits close to home for any UP student. Chad Booc, a graduate of our department and an alumnus of UP CURSOR, is a famous victim. The circumstances surrounding his death are a particularly polarizing topic. While many condemned the state for his death, many still lauded the government for its actions. We observed many Tweets that red-tagged Chad and portrayed him as a terrorist. Our frustration regarding this, and the inherent dangers of red-tagging, lead us to choose this issue as the focus of our CS 132 project.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="" alt="" class="card-logo">
+                    <h3>
+                        Problem
+                    </h3>
+                    <p>Twitter has become a prominent platform for red-taggers to spread disinformation and target activists like Chad Booc. The ease with which information can be disseminated on Twitter means that disinformation can quickly gain traction and be amplified, leading to potentially severe consequences for targeted individuals and movements. These consequences include defamation, harassment, or even death, like in Chad Booc’s case.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="" alt="" class="card-logo">
+                    <h3>
+                        Solution
+                    </h3>
+                    <p>
+                        The use of disinformation by red-taggers can make it hard to properly refute their arguments. Through this project, we will be able to analyze the behavior and intent of red taggers on Twitter and identify patterns of red-tagging. Through this, we can gain a better understanding of how red-taggers operate which can be helpful as a reference for combatting disinformation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="research-question">
+        <div id="research-question-container">
+            <h1>Problem Formulation</h1>
+            <div class="thing-1">
+                <h3>Research Question</h3>
+                <p>What kind of behaviour did red-taggers exhibit from 2016-2022 concerning Chad Booc and his activities in relation with:</p>
+                <ol>
+                    <li>frequency of tweets,</li>
+                    <li>keywords used and their frequencies, and</li>
+                    <li>sentiment of comments?</li>
+                </ol>
+            </div>
+            <div class="thing-1">
+                <h3>Hypotheses</h3>
+                <ol>
+                    <li>The tweets red-tagging Chad Booc, and his activities significantly increased in frequency after his death.</li>
+                    <li>There was a significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                    <li>There is a shift in the emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                </ol>
+            </div>
+            <div class="thing-1">
+                <h3>Null Hypotheses</h3>
+                <ol>
+                    <li>There is no significant increase in the frequency of tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                    <li>There is no significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                    <li>There is no significant shift in emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section id="data"></section>
+    <section id="methods"></section>
+    <section id="results"></section>
+    <section id="team">
+        <div id="team-container">
+            <h1>About Us</h1>
+            <div class="team-member">
+                <img src="images/marius.jpg" alt="marius">
+                <h3>Marius Barcenas</h3>
+                <p>Hi! I'm Marius, a 2nd year Computer Science student. I'm interested in web development and data science. I'm also a member of the UP CURSOR.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/julia.jpg" alt="julia">
+                <h3>Julia Dy</h3>
+                <p>A second year BS Computer Science student from the University of the Philippines Diliman and a member of UP CURSOR. Interested in learning more about different fields of computer science. Likes to read and draw. Looks at cat pictures often.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/joshua.jpg" alt="joshua">
+                <h3>Joshua Felipe</h3>
+                <p>A BS Computer Science sophomore in University of the Philippines Diliman, and a member of the UP Association of Computer Science Majors (UP CURSOR). Seeking opportunities to develop management and leadership skills in the field of computer technology. Enjoys coding and creating programs that sharpen problem solving skills. Loves being around dogs and sharing random cat videos.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
