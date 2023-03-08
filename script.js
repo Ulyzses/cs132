@@ -8,6 +8,17 @@ function toggleTheme() {
     }
 }
 
+const groupNameElem = document.getElementById('group-name');
+const logoElem = document.getElementById('logo');
+
+groupNameElem.addEventListener('mouseenter', (e) => {
+    logoElem.classList.add('grow');
+})
+
+groupNameElem.addEventListener('mouseleave', (e) => {
+    logoElem.classList.remove('grow');
+})
+
 
 Array.from(document.getElementsByClassName('intro-letter'))
     .forEach((elem) => {

@@ -153,6 +153,22 @@ header a {
     gap: 2rem;
 }
 
+#logo-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-div img {
+    max-width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#home-content {
+    flex: 2;
+}
+
 #intro {
     font-size: 3rem;
     font-weight: 700;
@@ -161,10 +177,6 @@ header a {
 .intro-letter {
     cursor: pointer;
     /* color: var(--color-green); */
-}
-
-#group-name {
-    /* color: var(--color-red); */
 }
 
 #title {
@@ -223,5 +235,28 @@ header a {
 @media screen and (max-width: 1024px) {
     .card .right {
         flex: 2;
+    }
+
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+    }
+
+    #logo-div {
+        flex: 0;
+    }
+
+    #home-content {
+        flex: 0;
+    }
+
+    #home-content * {
+        text-align: center;
+        justify-content: center;
+    }
+
+    #logo-div img {
+        max-height: 200px;
     }
 }
