@@ -38,8 +38,21 @@ section {
     border-bottom: 2px solid var(--color-black);
 }
 
-.section-title {
+h1 {
     font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.section-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.section-title {
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -84,14 +97,22 @@ section {
     flex: 4;
 }
 
-ol {
+.card .right p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.card .right li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+ol, ul {
     list-style: none;
     counter-reset: item;
+    margin-bottom: 1rem;
 }
 
 ol > li {
     counter-increment: item;
-    margin-bottom: 5px;
     
 }
 
@@ -106,12 +127,29 @@ ol > li:before {
     display: inline-block;
 }
 
+ol.two-column {
+    column-count: 2;
+}
+
+
+ul > li:not(.member-item):before {
+    margin-right: 10px;
+    content: '';
+    background: var(--color-black);
+    border-radius: 100%;
+    color: var(--color-white);
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+}
+
 /* Headers */
 
 header {
     background-color: var(--color-black);
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .header-container {
@@ -174,9 +212,8 @@ header a {
     font-weight: 700;
 }
 
-.intro-letter {
+#group-name {
     cursor: pointer;
-    /* color: var(--color-green); */
 }
 
 #title {
@@ -229,6 +266,11 @@ header a {
     .card .left {
         flex-direction: column-reverse;
         border-right: none;
+    }
+
+    .card .right p,
+    .card .right li {
+        text-align: justify;
     }
 }
 

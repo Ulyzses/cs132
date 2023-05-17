@@ -1,0 +1,8 @@
+body {
+    background-color: aqua;
+}
+
+h1, h2, h3, p, a {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #FF10F0;
+}

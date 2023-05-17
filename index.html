@@ -40,9 +40,9 @@
                 <p id="home-desc">This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc and Lumad Schools</span>, which aims to investigate tweets that red-tag the mentioned parties, and analyse the behaiours of these tweeps.</p>
                 <div id="team-members">
                     <ul>
-                        <li id="member-P">Pips</li>
-                        <li id="member-J">Julia</li>
-                        <li id="member-M">Marius</li>
+                        <li class="member-item" id="member-P">Pips</li>
+                        <li class="member-item" id="member-J">Julia</li>
+                        <li class="member-item" id="member-M">Marius</li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <h1 class="section-title">
                 Overview
             </h1>
-            <p>
+            <p class="section-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
             </p>
             <!-- <div class="card-container"> -->
@@ -98,10 +98,10 @@
             <!-- </div> -->
         </div>
     </section>
-    <section class="container" id="research-question">
-        <div id="research-question-container">
+    <section id="research-question">
+        <div class="container" id="research-question-container">
             <h1 class="section-title">Problem Formulation</h1>
-            <p>
+            <p class="section-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
             </p>
             <div class="card">
@@ -153,8 +153,174 @@
             </div>
         </div>
     </section>
-    <section id="data"></section>
-    <section id="methods"></section>
+    <section id="data-collection" id="data-collection-container">
+        <div class="container">
+            <h1 class="section-title">Data Collection</h1>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore eos perferendis explicabo minus quo magni voluptatum quaerat tenetur recusandae dolorem rem vitae incidunt architecto eius dignissimos iure quidem, esse alias!
+            </p>
+            <div class="card">
+                <div class="left">
+                    <h3>Topic</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        We gathered tweets that red-tagged Chad Booc and Lumad schools. The scope of our data collection is 2022, the year he was killed.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Keywords</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        In scraping for tweets, we used two sets of keywords, one for Chad Booc and one for Lumad school. Specifically, these are:
+                    </p>
+                    <ol>
+                        <li>"chad booc (cpp OR npa OR terorista)"</li>
+                        <li>"lumad (cpp OR npa OR terorista)"</li>
+                    </ol>
+                    <p>
+                        With this set of keywords, we were able to collect a majority of tweets from 2022 that red-tagged Chad Booc and Lumad schools.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Tools</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        In order to speed up the data collection process, we used <a href="https://github.com/JustAnotherArchivist/snscrape">snscraper</a>, a web scraper for social networking services (SNS).
+                    </p>
+                </div>
+            </div>
+            </p>
+        </div>
+    </section>
+    <section id="data-exploration" id="data-exploration-container">
+        <div class="container">
+            <h1 class="section-title">Data Exploration</h1>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero harum, dolorum aperiam nemo quam quod. Voluptatum, nostrum corporis suscipit eum magnam eius exercitationem iure dolores magni illo molestias adipisci.
+            </p>
+            <div class="card">
+                <div class="left">
+                    <h3>Data Structure</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        Each row in our dataset contains one tweet. The columns we collected to describe each tweet are the following:
+                        <ol class="two-column">
+                            <li>Tweet URL</li>
+                            <li>Keywords Used</li>
+                            <li>Account Handle</li>
+                            <li>Account Display Name</li>
+                            <li>Account Bio</li>
+                            <li>Account Type</li>
+                            <li>Account Join Date</li>
+                            <li>Account Following Count</li>
+                            <li>Account Followers Count</li>
+                            <li>Account Location</li>
+                            <li>Tweet Content</li>
+                            <li>Tweet Type</li>
+                            <li>Tweet Date Posted</li>
+                            <li>Tweet Content Type</li>
+                            <li>Tweet Likes</li>
+                            <li>Tweet Replies</li>
+                            <li>Tweet Retweets</li>
+                            <li>Tweet Quote Tweets</li>
+                            <li>Tweet Views</li>
+                        </ol>
+                        <p>However, for the purposes of our analysis, we only used the following columns:</p>
+                        <ol>
+                            <li>Tweet URL</li>
+                            <li>Tweet Content</li>
+                            <li>Tweet Date Posted</li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Values Formatting</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        In the columns that we used, we did not encounter any missing values that needed filling. Similarly, we also do not have any columns that need normalising or standardisation.
+                    </p>
+                    <p>
+                        The column Tweet Date Posted contained datetime values in the format <code>MM/DD/YY hh:mm</code>. In order to make it readable for code, it was parsed into a datetime object as an ISO8601 format string.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Handling Outliers</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        For our time series analysis, we counted the number of relevant tweets per day. From this, we used a 7-day moving average to help find time intervals with a high number of tweets. We then used this (excluding intervals with 0 tweets) to identify outliers, which we defined as 7-day intervals with a number of tweets that is 1.5 IQRs above Q3.
+                    </p>
+                </div>
+            </div>
+            <h2 class="section-title">Natural Language Processing</h2>
+            <p class="section-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas aut aperiam atque molestiae asperiores sequi fuga officiis corporis nihil voluptatem iste dolorem illum, obcaecati maxime blanditiis, nulla excepturi dolorum! Natus.
+            </p>
+            <div class="card">
+                <div class="left">
+                    <h3>Preprocessing</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        In order to perform keyword and sentiment analysis on the tweets collected, the following basic procedures were performed:
+                    </p>
+                    <ol>
+                        <li>Remove mentions and links</li>
+                        <li>Translate the content</li>
+                        <li>Remove hashtags, punctuations, emojis, and extraneous whitespaces</li>
+                        <li>Lowercase the content</li>
+                    </ol>
+                    <p>
+                        This step was performed via Google App Script.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Tokenising and Stopword Removal</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        To get only important words and concepts in the tweets, a list of English stopwords is used to filter the words present in the tweet. This removes unnecessary words such as articles and pronouns in the content of the tweet. Then, NLTK's word_tokenize() function is used to get the tokenised words to prepare for the next steps.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Stemming and Lemmatisation</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        To get the common topics found across the gathered tweets, it is important that the content in each are in the same form. This is done by stemming and lemmatising the words. Stemming is done using NLTK's PorterStemmer class, while lemmatisation is done using NLTK's WordNetLemmatizer class.present in the same form. This is done by stemming and lemmatising the words.
+                    </p>
+                </div>
+            </div>
+            <h2 class="section-title">Time Series Analysis</h2>
+            <div class="card">
+                <div class="left">
+                    <h3>Binning</h2>
+                </div>
+                <div class="right">
+                    <p>
+                        In order to group the tweets by date, pandas' resample method is used. A moving average is also computed using pandas' rolling method is used with a window size of 7 to show weekly trends in the data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="results"></section>
     <section id="team">
         <div id="team-container">
