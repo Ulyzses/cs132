@@ -54,7 +54,7 @@
                 Overview
             </h1>
             <p class="section-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
+                This project hones the students' critical thinking by analyzing tweets and detect misinformation and disinformation related to Chad Booc's death, and his activities with the Lumads. Moreover, we examined tweets that contains misinformation regarding Lumad schools and communities.
             </p>
             <!-- <div class="card-container"> -->
                 <div class="card">
@@ -102,18 +102,17 @@
         <div class="container" id="research-question-container">
             <h1 class="section-title">Problem Formulation</h1>
             <p class="section-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit qui doloremque sed iure minima, voluptate aut harum numquam deleniti, doloribus fugit eligendi recusandae maxime amet impedit eos dolor obcaecati molestias!
+                At this stage, we decided what we wanted our topic to be and what kind of problem we hoped to answer. We then came up with our hypotheses and our general plan of action.
             </p>
             <div class="card">
                 <div class="left">
                     <h3>Research Question</h3>
                 </div>
                 <div class="right">
-                    <p>What kind of behaviour did red-taggers exhibit from 2016-2022 concerning Chad Booc and his activities in relation with:</p>
+                    <p>What kind of behaviour did red-taggers exhibit in 2022 concerning Chad Booc and his activities in relation with:</p>
                     <ol>
-                        <li>frequency of tweets,</li>
-                        <li>keywords used and their frequencies, and</li>
-                        <li>sentiment of comments?</li>
+                        <li>frequency of tweets with mis/disinformation, and</li>
+                        <li>the content of these tweets?</li>
                     </ol>
                 </div>
             </div>
@@ -123,9 +122,8 @@
                 </div>
                 <div class="right">
                     <ol>
-                        <li>The tweets red-tagging Chad Booc, and his activities significantly increased in frequency after his death.</li>
-                        <li>There was a significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                        <li>There is a shift in the emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                        <li>The frequency of tweets red-tagging Chad Booc and his activities significantly increased after his death.</li>
+                        <li>The tweets containing dis-/misinformation predominantly talk about Chad Booc's death.</li>
                     </ol>
                 </div>
             </div>
@@ -136,8 +134,8 @@
                 <div class="right">
                     <ol>
                         <li>There is no significant increase in the frequency of tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                        <li>There is no significant change in the keywords used in tweets red-tagging Chad Booc and his activities before and after his death.</li>
-                        <li>There is no significant shift in emotions portrayed in the tweets red-tagging Chad Booc and his activities before and after his death.</li>
+                        <li>There is an equal distribution of topic clusters regarding Chad Booc's death; no specific topic cluster is significantly more predominant than others.</li>
+                    </li>
                     </ol>
                 </div>
             </div>
@@ -147,7 +145,7 @@
                 </div>
                 <div class="right">
                     <p>
-                        Analyse the sentiment, frequency of tweets, and usage of relevant keywords to identify red-taggers' behaviours
+                        Analyse the frequency of tweets and usage of relevant keywords to identify red-taggers' behaviours.
                     </p>
                 </div>
             </div>
@@ -157,7 +155,7 @@
         <div class="container">
             <h1 class="section-title">Data Collection</h1>
             <p class="section-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore eos perferendis explicabo minus quo magni voluptatum quaerat tenetur recusandae dolorem rem vitae incidunt architecto eius dignissimos iure quidem, esse alias!
+                We collected our data from twitter and analyzed each one to remove irrelevant tweets from the dataset.
             </p>
             <div class="card">
                 <div class="left">
@@ -203,7 +201,7 @@
         <div class="container">
             <h1 class="section-title">Data Exploration</h1>
             <p class="section-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut libero harum, dolorum aperiam nemo quam quod. Voluptatum, nostrum corporis suscipit eum magnam eius exercitationem iure dolores magni illo molestias adipisci.
+                After gathering and sorting the data we preprocessed the information and formatted the values such that it would handle outliers and missing values properly. These would help in providing better results for Natural Language Processing and Time Series analysis.  
             </p>
             <div class="card">
                 <div class="left">
@@ -261,13 +259,13 @@
                 </div>
                 <div class="right">
                     <p>
-                        For our time series analysis, we counted the number of relevant tweets per day. From this, we used a 7-day moving average to help find time intervals with a high number of tweets. We then used this (excluding intervals with 0 tweets) to identify outliers, which we defined as 7-day intervals with a number of tweets that is 1.5 IQRs above Q3.
+                        Due to the nature of our project objectives and data, we encountered no outliers that needed to be handled during preprocessing. Specifically, it is because these outliers are what we will be looking for in our time series analysis as peaks in the dataset.
                     </p>
                 </div>
             </div>
             <h2 class="section-title">Natural Language Processing</h2>
             <p class="section-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas aut aperiam atque molestiae asperiores sequi fuga officiis corporis nihil voluptatem iste dolorem illum, obcaecati maxime blanditiis, nulla excepturi dolorum! Natus.
+                We preprocessed the data in this stage in order to prepare it for Natural Language Processing (NLP). This was done by making use of procedures such as cleaning, tokenising, lemmatising and more. 
             </p>
             <div class="card">
                 <div class="left">
@@ -278,9 +276,8 @@
                         In order to perform keyword and sentiment analysis on the tweets collected, the following basic procedures were performed:
                     </p>
                     <ol>
-                        <li>Remove mentions and links</li>
                         <li>Translate the content</li>
-                        <li>Remove hashtags, punctuations, emojis, and extraneous whitespaces</li>
+                        <li>Remove mentions, hashtags, links, punctuations, emojis, and extraneous whitespaces</li>
                         <li>Lowercase the content</li>
                     </ol>
                     <p>
@@ -294,17 +291,17 @@
                 </div>
                 <div class="right">
                     <p>
-                        To get only important words and concepts in the tweets, a list of English stopwords is used to filter the words present in the tweet. This removes unnecessary words such as articles and pronouns in the content of the tweet. Then, NLTK's word_tokenize() function is used to get the tokenised words to prepare for the next steps.
+                        To get only important words and concepts in the tweets, a list of English stopwords is used to filter the words present in a tweet. This removes unnecessary words such as articles and pronouns in the content of the tweet. NLTK corpus' stopwords is used for this, which we extended to include additional words such as meaningless expressions. Then, NLTK's word_tokenize function is used to get the tokenised words to prepare for the next steps.
                     </p>
                 </div>
             </div>
             <div class="card">
                 <div class="left">
-                    <h3>Stemming and Lemmatisation</h3>
+                    <h3>Lemmatisation</h3>
                 </div>
                 <div class="right">
                     <p>
-                        To get the common topics found across the gathered tweets, it is important that the content in each are in the same form. This is done by stemming and lemmatising the words. Stemming is done using NLTK's PorterStemmer class, while lemmatisation is done using NLTK's WordNetLemmatizer class.present in the same form. This is done by stemming and lemmatising the words.
+                        To get the common topics found across the gathered tweets, it is important that the content in each are in the same form. This is done by lemmatising the tokenised words using NLTK's WordNetLemmatizer. The help of NLTK's post_tag is employed to determine each word's part of speech for a more accurate lemmatisation. 
                     </p>
                 </div>
             </div>
@@ -329,7 +326,89 @@
             <img src="images/frequency.png">
         </div>
     </section>
-    <section id="results"></section>
+    <section id="results" id="results-container">
+        <div class="container">
+            <h1 class="section-title">Results and Discussion</h1>
+            <p class="section-description">
+                We determined the topic clusters and dates where there was the most tweet activity from the given dataset using topic clustering and time series analysis.
+            </p>
+            <div class="card">
+                <div class="left">
+                    <h3>Time Analysis</h3>
+                </div>
+                <div class="right">
+                    <ol>
+                        <li> 
+                            February 25 - March 2
+                            <p>
+                                Within 6 days there was an influx of tweets regarding Chad Booc's death
+                            </p>
+                            <a href="https://twitter.com/rapplerdotcom/status/1497198032923861000?s=20">Link1</a>
+                            <a href="https://twitter.com/manilabulletin/status/1497091488857182208?s=20">Link2</a>
+
+                        </li>
+                        <li>
+                            March 3 - March 27
+                            <p>
+                                There was a relatively low but stable number of tweets present for 25 days. Also, a peak was detected on March 12 when Chad's autopsy report was released.
+                            </p>
+                            <a href="https://twitter.com/inquirerdotnet/status/1502415407617085447?s=20">Link1</a>
+                            <a href="https://twitter.com/ABSCBNNews/status/1502230353372762112?s=20">Link2</a>
+                        </li>
+                        <li>
+                            July 25 - August 3
+                            <p>
+                                Another peak was recorded during the week of President Marcos' first State of the Nation Address.
+                            </p>
+                            <a href="https://twitter.com/rapplerdotcom/status/1551719231808577536?s=20">Link1</a>
+                            <a href="https://twitter.com/gmanews/status/1552999450100236288?s=20">Link2</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left">
+                    <h3>Topic Clustering</h3>
+                </div>
+                <div class="right">
+                    <p>
+                        The cluster predominantly talking about his death is one of the clusters that had the highest number of tweets, we were unable to find a statistically significant difference on the amount in that cluster versus the others (χ2 = 1.96, p = 0.05). Using LDA, we were able to group the tweets into four clusters. The cluster of tweets predominantly talking about Chad Booc's death made up 27.46% of the total.
+                    </p>
+                    <ol>
+                        <li>
+                            Volunteers being red-tagged as NPA and Lumad schools being called NPA training grounds 
+                        </li>
+                        <a href="https://twitter.com/romy622/status/1552210079935447040">Link</a>
+                        <li>
+                            Makabayan block and other filipino activists getting killed and red-tagged
+                        </li>
+                        <a href="https://twitter.com/ReightWingAngel/status/1497126227827572738">Link</a>
+                        <li>
+                            Death of Chad Booc
+                        </li>
+                        <a href="https://twitter.com/osolge2665/status/1497176690174590976">Link</a>
+                        <li>
+                            Chad Booc red-tagged as a member of the NPA 
+                        </li>
+                        <a href="https://twitter.com/bwesittt/status/1497065318128418817">Link</a>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="conclusion" id="conclusion-container">
+        <div class="container">
+            <h1 class="section-title">Conclusion</h1>
+            <div class="card">
+                <p>
+                    We have identified several dates with distinct patterns of tweet frequency and corresponding characteristics. These are: February 25, the day of Chad Booc's death, March 12, Leni's Isabella rally and Inquirer's article release on Chad's autopsy, and July 26, PBBM's SONA. Furthermore, topic clustering showed that tweets are uniformly distributed across four topics: (1) Lumad schools as NPA training grounds, (2) red-tagging of Makabayan bloc and Filipino activists, (3) Chad Booc's death, and (4) Chad being red-tagged as an NPA member. 
+                </p>  
+            </div>
+            <p class="section-description">
+               From the results, we conclude that the frequency of tweets red-tagging Chad Booc and his activities significantly increased after his death, but these tweets did not predominantly talk about his death.
+            </p>
+        </div>
+    </section>
     <section id="team">
         <div id="team-container">
             <h1>About Us</h1>
