@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cambay&family=Hind+Madurai&family=Montserrat&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
@@ -367,6 +368,9 @@
                 </div>
             </div>
             <div class="card">
+                <!-- <iframe src="graphs/TSA.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe> -->
+            </div>
+            <div class="card">
                 <div class="left">
                     <h3>Topic Clustering</h3>
                 </div>
@@ -394,6 +398,13 @@
                     </ol>
                 </div>
             </div>
+            <div class="card">
+                <!-- <iframe src="graphs/keyword.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe> -->
+            </div>
+            
+            <div class="card">
+                <!-- <iframe src="graphs/STC.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe> -->
+            </div>
         </div>
     </section>
     <section id="conclusion" id="conclusion-container">
@@ -405,27 +416,45 @@
                 </p>  
             </div>
             <p class="section-description">
-               From the results, we conclude that the frequency of tweets red-tagging Chad Booc and his activities significantly increased after his death, but these tweets did not predominantly talk about his death.
+                From the results, we conclude that the frequency of tweets red-tagging Chad Booc and his activities significantly increased after his death, but these tweets did not predominantly talk about his death.
             </p>
         </div>
     </section>
     <section id="team">
-        <div id="team-container">
+        <div class="container">
             <h1>About Us</h1>
-            <div class="team-member">
-                <img src="images/marius.jpg" alt="marius">
-                <h3>Marius Barcenas</h3>
-                <p>Hi! I'm Marius, a 2nd year Computer Science student. I'm interested in web development and data science. I'm also a member of the UP CURSOR.</p>
+            <p class="section-description">
+                Hi! We're all second year Computer Science students from the University of the Philippines Diliman. We're interested in web development, data science, and machine learning.
+            </p>
+            <div class="team-cards">
+
+            <div class="team-card">
+                <div class="left">
+                    <img src="images/marius.png" alt="marius">
+                </div>
+                <div class="right">
+                    <h3>Marius Barcenas</h3>
+                    <p>Hi! I'm Marius, a 2nd year Computer Science student and a member of the UP Association of the Computer Science Majors (UP CURSOR). I'm interested in web development and data science, particularly in the field of NLP.</p>
+                </div>
             </div>
-            <div class="team-member">
-                <img src="images/julia.jpg" alt="julia">
-                <h3>Julia Dy</h3>
-                <p>A second year BS Computer Science student from the University of the Philippines Diliman and a member of UP CURSOR. Interested in learning more about different fields of computer science. Likes to read and draw. Looks at cat pictures often.</p>
+            <div class="team-card">
+                <div class="left">
+                    <img src="images/julia.jpg" alt="julia">
+                </div>
+                <div class="right">
+                    <h3>Julia Dy</h3>
+                    <p>A second year BS Computer Science student from the University of the Philippines Diliman and also a member of UP CURSOR. Interested in learning more about different fields of computer science. Likes to read and draw. Looks at cat pictures often.</p>
+                </div>
             </div>
-            <div class="team-member">
-                <img src="images/joshua.jpg" alt="joshua">
-                <h3>Joshua Felipe</h3>
-                <p>A BS Computer Science sophomore in University of the Philippines Diliman, and a member of the UP Association of Computer Science Majors (UP CURSOR). Seeking opportunities to develop management and leadership skills in the field of computer technology. Enjoys coding and creating programs that sharpen problem solving skills. Loves being around dogs and sharing random cat videos.</p>
+            <div class="team-card">
+                <div class="left">
+                    <img src="images/joshua.jpg" alt="joshua">
+                </div>
+                <div class="right">
+                    <h3>Joshua Felipe</h3>
+                    <p>A BS Computer Science sophomore in University of the Philippines Diliman, and a member of the UP Association of Computer Science Majors (UP CURSOR). Seeking opportunities to develop management and leadership skills in the field of computer technology. Enjoys coding and creating programs that sharpen problem solving skills. Loves being around dogs and sharing random cat videos.</p>    
+                </div>
+            </div>
             </div>
         </div>
     </section>

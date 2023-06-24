@@ -302,3 +302,56 @@ header a {
         max-height: 200px;
     }
 }
+
+iframe {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: calc(1rem);
+}
+
+.team-card {
+    margin: 1rem 0;
+    padding: 2rem;
+    border: 2px solid var(--color-black);
+    border-radius: calc(2rem);
+
+    font-size: 1rem;
+
+    background-color: var(--color-white);
+    box-shadow: 0 0 5px 5px #f8f8f8;
+
+    display: flex;
+    overflow: auto;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 2rem;
+}
+
+.team-card img {
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-width: 200px;
+}
+
+.team-card .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+.team-card .right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-card .right *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+
+.team-card .right h3 {
+    text-align: left;
+}
