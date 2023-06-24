@@ -33,3 +33,7 @@ Array.from(document.getElementsByClassName('intro-letter'))
             member.classList.remove('grow');
         })
     })
+
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+}
