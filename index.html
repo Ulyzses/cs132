@@ -26,9 +26,6 @@
                     <li><a href="#team">Team</a></li>
                 </ul>
             </nav>
-            <!-- <div class="theme-changer-container">
-                <button onclick="toggleTheme()">Click Me!</button>
-            </div> -->
         </div>
     </header>
     <section id="home">
@@ -38,7 +35,7 @@
             </div>
             <div id="home-content">
                 <h3 id="intro">Hi. We are the <span id="group-name"><span class="intro-letter" id="intro-P">P</span>y<span class="intro-letter" id="intro-J">J</span>a<span class="intro-letter" id="intro-M">M</span>as!</span></h3>
-                <p id="home-desc">This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc and Lumad Schools</span>, which aims to investigate tweets that red-tag the mentioned parties, and analyse the behaiours of these tweeps.</p>
+                <p id="home-desc">This is our project, <span id="title">Analysis of Tweets Red-Tagging Chad Booc and Lumad Schools</span>, which aims to investigate tweets that red-tag the mentioned parties, and analyse the behaviours of these Twitter users.</p>
                 <div id="team-members">
                     <ul>
                         <li class="member-item" id="member-P">Pips</li>
@@ -55,7 +52,7 @@
                 Overview
             </h1>
             <p class="section-description">
-                This project hones the students' critical thinking by analyzing tweets and detect misinformation and disinformation related to Chad Booc's death, and his activities with the Lumads. Moreover, we examined tweets that contains misinformation regarding Lumad schools and communities.
+                This project hones the students' critical thinking as they analyze tweets and detect misinformation and disinformation related to Chad Booc's death and his activities with the Lumads. Moreover, we examined tweets that contains misinformation regarding Lumad schools and communities.
             </p>
             <!-- <div class="card-container"> -->
                 <div class="card">
@@ -63,11 +60,10 @@
                         <h3>
                             Motivation
                         </h3>
-                        <img src="" alt="" class="card-logo">
                     </div>
                     <div class="right">
                         <p>
-                            Red-tagging is an issue that hits close to home for any UP student. Chad Booc, a graduate of our department and an alumnus of UP CURSOR, is a famous victim. The circumstances surrounding his death are particularly polarizing. While many condemned the state for his death, quite a few still lauded the government for its actions, an indication of the success of the state's red-tagging. Our frustration regarding this, and the inherent dangers of red-tagging, lead us to choose this issue as the focus of our CS 132 project.
+                            Red-tagging is an issue that hits close to home for any UP student. Chad Booc, a graduate of our department and an alumnus of UP CURSOR, is a famous victim of this issue. The circumstances surrounding his death are particularly polarizing. While many condemned the state for his death, quite a few lauded the government for its actions. This is an indication of the success of the state's red-tagging. Our frustration regarding this and the inherent dangers of red-tagging lead us to choose this issue as the focus of our CS 132 project.
                         </p>
                     </div>
                 </div>
@@ -76,7 +72,6 @@
                         <h3>
                             Problem
                         </h3>
-                        <img src="" alt="" class="card-logo">
                     </div>
                     <div class="right">
                         <p>Twitter has become a prominent platform for red-taggers to spread disinformation and target activists like Chad Booc. The ease with which information can be disseminated on Twitter means that disinformation can quickly gain traction and be amplified, leading to potentially severe consequences for targeted individuals and movements. These consequences include defamation, harassment, or even death, like in Chad Booc's case.
@@ -88,7 +83,6 @@
                         <h3>
                             Solution
                         </h3>
-                        <img src="" alt="" class="card-logo">
                     </div>
                     <div class="right">
                         <p>
@@ -152,11 +146,11 @@
             </div>
         </div>
     </section>
-    <section id="data-collection" id="data-collection-container">
+    <section id="data" id="data-collection-container">
         <div class="container">
             <h1 class="section-title">Data Collection</h1>
             <p class="section-description">
-                We collected our data from twitter and analyzed each one to remove irrelevant tweets from the dataset.
+                We collected our data from twitter and analyzed each tweet to remove irrelevant tweets from the dataset.
             </p>
             <div class="card">
                 <div class="left">
@@ -198,7 +192,7 @@
             </p>
         </div>
     </section>
-    <section id="data-exploration" id="data-exploration-container">
+    <section id="methods" id="data-exploration-container">
         <div class="container">
             <h1 class="section-title">Data Exploration</h1>
             <p class="section-description">
@@ -274,7 +268,7 @@
                 </div>
                 <div class="right">
                     <p>
-                        In order to perform keyword and sentiment analysis on the tweets collected, the following basic procedures were performed:
+                        In order to perform topic clustering on the tweets collected, the following basic procedures were performed:
                     </p>
                     <ol>
                         <li>Translate the content</li>
@@ -307,9 +301,11 @@
                 </div>
             </div>
             <p>
-                After these preprocessing procedures, we can get the top keywords used in the tweets:
+                After these preprocessing procedures, we were able to get the top keywords used in the tweets:
             </p>
-            <img src="images/top_keywords.png">
+            <div class="card">
+                <iframe src="graphs/keyword.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
+            </div>
             <h2 class="section-title">Time Series Analysis</h2>
             <div class="card">
                 <div class="left">
@@ -317,14 +313,16 @@
                 </div>
                 <div class="right">
                     <p>
-                        In order to group the tweets by date, pandas' resample method is used. A moving average is also computed using pandas' rolling method is used with a window size of 7 to show weekly trends in the data.
+                        In order to group the tweets by date, pandas' resample method is used with a frequency of 1 day.
                     </p>
                 </div>
             </div>
             <p>
-                We now have the time series data for the number of tweets per day. The red bars are the number of tweets per day. The blue line is the 7-day moving average. The green line is the boundary from which we consider a time interval to be an outlier.
+                Graphing this binned dataset, we can see the number of tweets posted per day:
             </p>
-            <img src="images/frequency.png">
+            <div class="card">
+                <iframe src="graphs/TS.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
+            </div>
         </div>
     </section>
     <section id="results" id="results-container">
@@ -376,7 +374,7 @@
                 </div>
                 <div class="right">
                     <p>
-                        The cluster predominantly talking about his death is one of the clusters that had the highest number of tweets, we were unable to find a statistically significant difference on the amount in that cluster versus the others (χ2 = 1.96, p = 0.05). Using LDA, we were able to group the tweets into four clusters. The cluster of tweets predominantly talking about Chad Booc's death made up 27.46% of the total.
+                        Using Latent Dirichlet Allocation (LDA), we were able to group the tweets into four clusters. The cluster of tweets predominantly talking about Chad Booc's death made up 27.46% of the total. Though this is one of the clusters that had the highest number of tweets, we were unable to find a statistically significant difference on the count in that cluster versus the others (χ2 = 1.96, p = 0.58).
                     </p>
                     <ol>
                         <li>
@@ -397,11 +395,7 @@
                         <a href="https://twitter.com/bwesittt/status/1497065318128418817">Link</a>
                     </ol>
                 </div>
-            </div>
-            <div class="card">
-                <iframe src="graphs/keyword.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
-            </div>
-            
+            </div>            
             <div class="card">
                 <iframe src="graphs/STC.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
             </div>
@@ -412,7 +406,7 @@
             <h1 class="section-title">Conclusion</h1>
             <div class="card">
                 <p>
-                    We have identified several dates with distinct patterns of tweet frequency and corresponding characteristics. These are: February 25, the day of Chad Booc's death, March 12, Leni's Isabella rally and Inquirer's article release on Chad's autopsy, and July 26, PBBM's SONA. Furthermore, topic clustering showed that tweets are uniformly distributed across four topics: (1) Lumad schools as NPA training grounds, (2) red-tagging of Makabayan bloc and Filipino activists, (3) Chad Booc's death, and (4) Chad being red-tagged as an NPA member. 
+                    We have identified several dates with distinct patterns of tweet frequency and corresponding characteristics. These are: February 25, the day of Chad Booc's death, March 12, with Inquirer's article release on Chad's autopsy, and July 26, PBBM's SONA. Furthermore, topic clustering showed that tweets are uniformly distributed across four topics: (1) Lumad schools as NPA training grounds, (2) red-tagging of Makabayan bloc and Filipino activists, (3) Chad Booc's death, and (4) Chad being red-tagged as an NPA member. 
                 </p>  
             </div>
             <p class="section-description">
@@ -422,39 +416,30 @@
     </section>
     <section id="team">
         <div class="container">
-            <h1>About Us</h1>
+            <h1 class="section-title">About Us</h1>
             <p class="section-description">
-                Hi! We're all second year Computer Science students from the University of the Philippines Diliman. We're interested in web development, data science, and machine learning.
+                Hi! We are a grousecond year BS Computer Science students from the University of the Philippines Diliman and members of the UP Association of Computer Science Majors (UP CURSOR).
             </p>
             <div class="team-cards">
-
-            <div class="team-card">
-                <div class="left">
+                <div class="team-card">
                     <img src="images/marius.png" alt="marius">
-                </div>
-                <div class="right">
                     <h3>Marius Barcenas</h3>
-                    <p>Hi! I'm Marius, a 2nd year Computer Science student and a member of the UP Association of the Computer Science Majors (UP CURSOR). I'm interested in web development and data science, particularly in the field of NLP.</p>
+                    <a class="team-email" href="mailto:mubarcenas@up.edu.ph">mubarcenas@up.edu.ph</a>
+                    <p>Hi! I'm Marius. I'm interested in web development and data science, particularly in the field of NLP.</p>
                 </div>
-            </div>
-            <div class="team-card">
-                <div class="left">
+                <div class="team-card">
                     <img src="images/julia.jpg" alt="julia">
-                </div>
-                <div class="right">
                     <h3>Julia Dy</h3>
-                    <p>A second year BS Computer Science student from the University of the Philippines Diliman and also a member of UP CURSOR. Interested in learning more about different fields of computer science. Likes to read and draw. Looks at cat pictures often.</p>
+                    <a class="team-email" href="mailto:jmdy1@up.edu.ph">jmdy1@up.edu.ph</a>
+                    <p>Hello, I'm Julia! I'm interested in learning more about different fields of computer science. Outside of academics, I like to read, draw, and look at cat pictures.</p>
                 </div>
-            </div>
-            <div class="team-card">
-                <div class="left">
+                <div class="team-card">
                     <img src="images/joshua.jpg" alt="joshua">
-                </div>
-                <div class="right">
                     <h3>Joshua Felipe</h3>
-                    <p>A BS Computer Science sophomore in University of the Philippines Diliman, and a member of the UP Association of Computer Science Majors (UP CURSOR). Seeking opportunities to develop management and leadership skills in the field of computer technology. Enjoys coding and creating programs that sharpen problem solving skills. Loves being around dogs and sharing random cat videos.</p>    
+                    <a class="team-email" href="mailto:jlfelipe1@up.edu.ph">jlfelipe1@up.edu.ph</a>
+                    <p>Hi! I'm Joshua. I seek opportunities in different fields of computer technology, especially in software engineering and web development.
+                    </p> 
                 </div>
-            </div>
             </div>
         </div>
     </section>

@@ -29,7 +29,7 @@ html, body {
 }
 
 .container {
-    padding: 30px;
+    padding: 60px 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -54,7 +54,7 @@ h2 {
 
 .section-title {
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 3rem auto 1rem;
 }
 
 .card-container {
@@ -272,6 +272,10 @@ header a {
     .card .right li {
         text-align: justify;
     }
+
+    .team-cards {
+        grid-template-columns: 1fr; /* Display as a single column */
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -309,6 +313,12 @@ iframe {
     border-radius: calc(1rem);
 }
 
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
 .team-card {
     margin: 1rem 0;
     padding: 2rem;
@@ -321,10 +331,9 @@ iframe {
     box-shadow: 0 0 5px 5px #f8f8f8;
 
     display: flex;
-    overflow: auto;
-    align-items: stretch;
-    align-content: stretch;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    align-content: top;
 }
 
 .team-card img {
@@ -334,24 +343,20 @@ iframe {
     max-width: 200px;
 }
 
-.team-card .left {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-
-}
-
-.team-card .right {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.team-card .right *:not(:last-child) {
+.team-card *:not(:last-child):not(h3) {
     margin-bottom: 1rem;
 }
 
+.team-card p {
+    text-align: justify;
+}
 
-.team-card .right h3 {
-    text-align: left;
+.team-email {
+    text-decoration: none;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.team-email:hover {
+    text-decoration: underline;
 }
